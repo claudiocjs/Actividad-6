@@ -1,0 +1,33 @@
+from clasefechayhora import FechaHora
+def opcion0():
+    print("Adiós")
+def opcion1():
+    h1=FechaHora()
+    h1.PonerEnHora(13,0,0)
+    h2=FechaHora()
+    h2.PonerEnHora(5,15,0)
+    h3=h1+h2
+    print("".format(h3.Mostrar()))
+    input('')
+def opcion2():
+    h1=FechaHora()
+    h1.PonerEnHora(4,0,0)
+    h2=FechaHora()
+    h2.PonerEnHora(5,0,0)
+    h3=h1-h2
+    print("".format(h3.Mostrar()))
+    input('')
+def opcion3():
+    h1=FechaHora(15,8,1995)
+    h2=FechaHora(15,8,1995)
+    print("{}".format(h1>h2))
+    input('')
+switcher = {
+    0: opcion0,
+    1: opcion1,
+    2: opcion2,
+    3: opcion3
+    }
+def switch(argument):
+    func = switcher.get(argument, lambda: print("Opción incorrecta"))
+    func()
