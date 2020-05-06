@@ -1,0 +1,19 @@
+from clasefechayhora import FechaHora
+from menu import switch
+
+
+
+
+
+
+if __name__ == '__main__':
+    bandera=False
+    while not bandera:
+        print("MENU DE OPCIONES")
+        print("0: Salir.")
+        print("1: Sumar hora.")
+        print("2: Restar hora.")
+        print("3:Distinguir entre dos horas (>).")
+        opcion= int(input("Ingrese una opción: "))
+        switch(opcion)
+        bandera = int(opcion)==0 # Si lee el 0 cambia la bandera a true y sale del menú
